@@ -1,5 +1,36 @@
-import UIKit
+import Foundation
 
-final class LoginViewModel: UIViewController {
+
+enum LoginState {
+    case success
+    case error(reason: String)
+    case loading
+}
+
+final class LoginViewModel {
+    let onStateChanged = Binding<LoginState>()
+    
+    func signIn(_ username: String?, _ password: String?) {
+        guard let username, validateUsername(username) else {
+            return onStateChanged.update(newValue: .error(reason: "Correo electrónico invalido"))
+        }
+        
+        guard let password, validatePassword(password) else {
+            return onStateChanged.update(newValue: .error(reason: "Contraseña invalida"))
+        }
+        onStateChanged.update(newValue: .loading)
+        DispatchQueue.global().asyncAfter(deadline: .now() + 3) {[weak self] in
+            self?.onStateChanged.update(newValue: .success)
+        }
+        
+    }
+    
+    private func validateUsername(_ username: String) -> Bool {
+        username.contains("@") && !username.isEmpty
+    }
+    
+    private func validatePassword(_ password: String) -> Bool {
+        password.count >= 4
+    }
     
 }
