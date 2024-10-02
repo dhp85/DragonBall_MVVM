@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashViewController" customModule="DragonBall_MVVM" customModuleProvider="target">
             <connections>
+                <outlet property="spinner" destination="MRZ-zA-0yZ" id="oCQ-1R-Zhb"/>
                 <outlet property="view" destination="iN0-l3-epB" id="XRL-BM-ayH"/>
             </connections>
         </placeholder>
@@ -18,20 +19,28 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqs-hL-Aum">
-                    <rect key="frame" x="175" y="409" width="42" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spirit Bomb  By 17Silence" translatesAutoresizingMaskIntoConstraints="NO" id="qh7-to-fle">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="MRZ-zA-0yZ">
+                    <rect key="frame" x="178" y="420" width="37" height="37"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="qh7-to-fle" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0OG-Wv-kfH"/>
+                <constraint firstItem="MRZ-zA-0yZ" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="FTg-BO-iW5"/>
+                <constraint firstAttribute="bottom" secondItem="qh7-to-fle" secondAttribute="bottom" id="itt-dV-kmg"/>
+                <constraint firstAttribute="trailing" secondItem="qh7-to-fle" secondAttribute="trailing" id="u0d-nX-Qnn"/>
+                <constraint firstItem="qh7-to-fle" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="uH7-r5-QIf"/>
+                <constraint firstItem="MRZ-zA-0yZ" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="vdw-Cj-mog"/>
+            </constraints>
             <point key="canvasLocation" x="-8" y="-11"/>
         </view>
     </objects>
     <resources>
+        <image name="Spirit Bomb  By 17Silence" width="736" height="1309"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -8,7 +8,6 @@
 import XCTest
 
 final class DragonBall_MVVMUITestsLaunchTests: XCTestCase {
-
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }

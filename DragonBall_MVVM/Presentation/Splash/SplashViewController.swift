@@ -1,13 +1,54 @@
-//
+
 import UIKit
 
 final class SplashViewController: UIViewController {
-    init() {
+    @IBOutlet private weak var spinner: UIActivityIndicatorView!
+    
+    private let viewModel: SplashViewModel
+    
+    init(viewmodel: SplashViewModel) {
+        self.viewModel = viewmodel
         super.init(nibName: "SplashView", bundle: Bundle(for: type(of: self)))
+    }
+
+    required init?(coder _: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        bind()
+        viewModel.load()
         
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    private func bind() {
+        viewModel.onStateChanged.bind { [weak self] state in
+            switch state {
+            case .loading:
+                self?.setAnimation(true)
+            case .ready:
+                self?.setAnimation(false)
+            case .error:
+                break
+            }
+            
+        }
     }
+    
+    private func setAnimation(_ animating: Bool) {
+        switch spinner.isAnimating {
+        case true where !animating:
+            spinner.stopAnimating()
+        case false where animating:
+            spinner.startAnimating()
+        default:
+            break
+        }
+    }
+}
+
+
+#Preview {
+    SplashBuilder().build()
 }
