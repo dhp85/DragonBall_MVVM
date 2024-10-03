@@ -9,28 +9,26 @@ enum LoginState {
 
 final class LoginViewModel {
     let onStateChanged = Binding<LoginState>()
+    private let useCase: LoginUseCaseContract
+    
+    init(useCase: LoginUseCaseContract) {
+        self.useCase = useCase
+    }
     
     func signIn(_ username: String?, _ password: String?) {
-        guard let username, validateUsername(username) else {
-            return onStateChanged.update(newValue: .error(reason: "Correo electrónico invalido"))
-        }
-        
-        guard let password, validatePassword(password) else {
-            return onStateChanged.update(newValue: .error(reason: "Contraseña invalida"))
-        }
         onStateChanged.update(newValue: .loading)
-        DispatchQueue.global().asyncAfter(deadline: .now() + 3) {[weak self] in
-            self?.onStateChanged.update(newValue: .success)
+        let credentails = Credentials(username: username ?? "", password: password ?? "")
+        useCase.execute(credentials: credentails) { [weak self] result in
+            do {
+                try result.get()
+                self?.onStateChanged.update(newValue: .success)
+            } catch let error as LoginUseCaseError {
+                self?.onStateChanged.update(newValue: .error(reason: error.reason))
+            } catch {
+                self?.onStateChanged.update(newValue: .error(reason: "Unknown error"))
+            }
         }
         
-    }
-    
-    private func validateUsername(_ username: String) -> Bool {
-        username.contains("@") && !username.isEmpty
-    }
-    
-    private func validatePassword(_ password: String) -> Bool {
-        password.count >= 4
     }
     
 }
