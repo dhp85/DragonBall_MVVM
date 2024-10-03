@@ -7,6 +7,12 @@ protocol LoginUseCaseContract {
 }
 
 final class LoginUseCase: LoginUseCaseContract {
+    private let dataSource: SessionDataSourceContract
+    
+    init(dataSource: SessionDataSourceContract) {
+        self.dataSource = dataSource
+    }
+    
     func execute(credentials: Credentials, completion: @escaping (Result<Void, any Error>) -> Void) {
         guard validateUsername(credentials.username) else {
             return completion(.failure(LoginUseCaseError(reason: "Usuario invalido")))
@@ -16,9 +22,10 @@ final class LoginUseCase: LoginUseCaseContract {
             return completion(.failure(LoginUseCaseError(reason: "Contraseña invalida")))
         }
         
-        LoginAPIRequest(credentials: credentials).perform { result in
+        LoginAPIRequest(credentials: credentials).perform { [weak self] result in
             switch result {
-                case .success:
+                case .success(let token):
+                self?.dataSource.storeSession(token)
                 completion(.success(()))
             case .failure:
                 completion(.failure(LoginUseCaseError(reason: "Error de autenticación")))
