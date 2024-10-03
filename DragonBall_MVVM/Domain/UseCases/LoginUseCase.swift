@@ -16,8 +16,14 @@ final class LoginUseCase: LoginUseCaseContract {
             return completion(.failure(LoginUseCaseError(reason: "Contraseña invalida")))
         }
         
-        DispatchQueue.global().asyncAfter(deadline: .now() + 10) {
-            completion(.success(()))
+        LoginAPIRequest(credentials: credentials).perform { result in
+            switch result {
+                case .success:
+                completion(.success(()))
+            case .failure:
+                completion(.failure(LoginUseCaseError(reason: "Error de autenticación")))
+            }
+           
         }
     }
     
