@@ -1,7 +1,7 @@
 import UIKit
 
-
 final class LoginBuilder {
+    
     func build() -> UIViewController {
         let loginUseCase = LoginUseCase()
         let viewModel = LoginViewModel(useCase: loginUseCase)

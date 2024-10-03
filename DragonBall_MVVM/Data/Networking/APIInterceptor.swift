@@ -1,13 +1,11 @@
 import Foundation
 
-
-protocol APIInterceptor {
-    
-}
+protocol APIInterceptor { }
 
 protocol APIRequestInterceptor: APIInterceptor {
     func intercept(request: inout URLRequest)
 }
+
 
 final class AuthenticationRequestInterceptor: APIRequestInterceptor {
     private let dataSource: SessionDataSourceContract
@@ -17,7 +15,9 @@ final class AuthenticationRequestInterceptor: APIRequestInterceptor {
     }
     
     func intercept(request: inout URLRequest) {
-        guard let session = dataSource.getSession() else { return }
+        guard let session = dataSource.getSession() else {
+            return
+        }
         request.setValue("Bearer \(String(decoding: session, as: UTF8.self))", forHTTPHeaderField: "Authorization")
     }
 }
