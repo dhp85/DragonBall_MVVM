@@ -54,7 +54,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qB-Xv-l8o">
                                     <rect key="frame" x="0.0" y="103" width="321" height="34.333333333333343"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" title="Iniciar Sesión"/>
                                     <connections>
                                         <action selector="onLoginButton:" destination="-1" eventType="touchUpInside" id="GIW-T2-2rc"/>
                                     </connections>

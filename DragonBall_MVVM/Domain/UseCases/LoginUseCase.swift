@@ -13,10 +13,10 @@ final class LoginUseCase: LoginUseCaseContract {
     
     func execute(credentials: Credentials, completion: @escaping (Result<Void, LoginUseCaseError>) -> Void) {
         guard validateUsername(credentials.username) else {
-            return completion(.failure(LoginUseCaseError(reason: "Invalid username")))
+            return completion(.failure(LoginUseCaseError(reason: "Correo electrónico inválido")))
         }
         guard validatePassword(credentials.password) else {
-            return completion(.failure(LoginUseCaseError(reason: "Invalid password")))
+            return completion(.failure(LoginUseCaseError(reason: "Contraseña inválida")))
         }
         LoginAPIRequest(credentials: credentials)
             .perform { [weak self] result in
@@ -25,7 +25,7 @@ final class LoginUseCase: LoginUseCaseContract {
                     self?.dataSource.storeSession(token)
                     completion(.success(()))
                 case .failure:
-                    completion(.failure(LoginUseCaseError(reason: "Network failed")))
+                    completion(.failure(LoginUseCaseError(reason: "Fallo de Red")))
                 }
             }
     }

@@ -69,6 +69,3 @@ final class LoginViewController: UIViewController {
     
 }
 
-#Preview {
-    LoginBuilder().build()
-}

@@ -19,14 +19,14 @@
                         <rect key="frame" x="16" y="12" width="361" height="66"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L1s-D4-inn" customClass="AsyncImageView" customModule="DragonBall_MVVM" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="66" height="66"/>
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="66"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="L1s-D4-inn" secondAttribute="height" multiplier="1:1" id="T0L-Wz-2rK"/>
+                                    <constraint firstAttribute="width" constant="128" id="6ux-BB-zqr"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wU3-NU-sQG">
-                                <rect key="frame" x="74" y="0.0" width="287" height="66"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="136" y="0.0" width="225" height="66"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

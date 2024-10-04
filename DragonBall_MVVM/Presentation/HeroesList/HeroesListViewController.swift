@@ -23,7 +23,7 @@ final class HeroesListViewController: UIViewController, UITableViewDataSource, U
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(HeroTableViewCell.nib, forCellReuseIdentifier: HeroTableViewCell.reuseIdentifier)
-        
+        title = "Heroes"
         bind()
         viewModel.load()
     }
@@ -93,3 +93,4 @@ final class HeroesListViewController: UIViewController, UITableViewDataSource, U
         print("Hello world")
     }
 }
+
