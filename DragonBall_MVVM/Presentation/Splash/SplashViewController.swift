@@ -50,6 +50,4 @@ final class SplashViewController: UIViewController {
 }
 
 
-#Preview {
-    SplashBuilder().build()
-}
+

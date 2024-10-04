@@ -69,6 +69,9 @@ final class HeroesListViewController: UIViewController, UITableViewDataSource, U
         tableView.reloadData()
     }
 
+    
+    // MARK: - Table View Delegate
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.heroes.count
     }
@@ -90,7 +93,15 @@ final class HeroesListViewController: UIViewController, UITableViewDataSource, U
     
     // Aqui cambia a la vista del detalle del heroe.
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Hello world")
+      
+        let hero = viewModel.heroes[indexPath.row]
+        let heroeDetailViewModel = HeroeDetailViewModel(heroe: hero)
+        let heroDetailViewController = HeroeDetailViewController(viewModel: heroeDetailViewModel)
+        navigationController?.pushViewController(heroDetailViewController, animated: true)
+
+       
     }
 }
+
+
 
