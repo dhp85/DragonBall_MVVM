@@ -19,7 +19,7 @@ final class HeroesListViewModel {
         onStateChange.update(newValue: .loading)
         useCase.execute { [weak self] result in
             do {
-                let heroes = try result.get()
+                self?.heroes = try result.get()
                 self?.onStateChange.update(newValue: .success)
             }catch {
                 self?.onStateChange.update(newValue: .error(reason: error.localizedDescription))

@@ -1,6 +1,6 @@
 import UIKit
 
-final class HeroesListViewController: UIViewController, UITableViewDataSource {
+final class HeroesListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var errorLabel: UILabel!
     @IBOutlet private weak var spinner: UIActivityIndicatorView!
@@ -10,7 +10,7 @@ final class HeroesListViewController: UIViewController, UITableViewDataSource {
     
     init(viewModel: HeroesListViewModel) {
         self.viewModel = viewModel
-        super.init(nibName: "HeroesList", bundle: Bundle(for: type(of: self)))
+        super.init(nibName: "HeroesListView", bundle: Bundle(for: type(of: self)))
         
     }
     
@@ -21,9 +21,14 @@ final class HeroesListViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(HeroTableViewCell.nib, forCellReuseIdentifier: HeroTableViewCell.reuseIdentifier)
+        
         bind()
         viewModel.load()
     }
+    
+    
     
     @IBAction func onRetryTapped(_ sender: Any) {
     }
@@ -68,7 +73,23 @@ final class HeroesListViewController: UIViewController, UITableViewDataSource {
         viewModel.heroes.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        90
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: HeroTableViewCell.reuseIdentifier, for: indexPath)
+        if let cell = cell as? HeroTableViewCell {
+            let hero = viewModel.heroes[indexPath.row]
+            cell.setImage(hero.photo)
+            cell.setHeroName(hero.name)
+        }
+        
+        return cell
+    }
+    
+    // Aqui cambia a la vista del detalle del heroe.
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Hello world")
     }
 }
