@@ -3,7 +3,6 @@ import UIKit
 
 final class HeroeDetailViewController: UIViewController {
     @IBOutlet private weak var heroeImageView: AsyncImageView!
-    @IBOutlet private weak var nameTransformationUIButton: UIButton!
     @IBOutlet private weak var heroeUILabel: UILabel!
     @IBOutlet private weak var characterLabelUILabel: UILabel!
     
@@ -12,7 +11,7 @@ final class HeroeDetailViewController: UIViewController {
     
     init(viewModel: HeroeDetailViewModel) {
         self.viewModel = viewModel
-        super.init(nibName: "DetailHeroeView", bundle: Bundle(for: type(of: self)))
+        super.init(nibName: "HeroeDetailView", bundle: Bundle(for: type(of: self)))
     }
     
     required init?(coder: NSCoder) {

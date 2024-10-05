@@ -13,7 +13,6 @@
                 <outlet property="characterLabelUILabel" destination="J4S-ag-9Ij" id="zSc-ku-jwr"/>
                 <outlet property="heroeImageView" destination="pwt-88-kgG" id="d3b-o0-yKk"/>
                 <outlet property="heroeUILabel" destination="RkU-bh-biL" id="5GM-A8-25p"/>
-                <outlet property="nameTransformationUIButton" destination="9UU-X2-cjf" id="BL6-BV-D7T"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,14 +33,6 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UU-X2-cjf">
-                    <rect key="frame" x="16" y="847" width="398" height="35"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                    <connections>
-                        <action selector="pushTranformationButton:" destination="-1" eventType="touchUpInside" id="ewn-ji-gFO"/>
-                    </connections>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4S-ag-9Ij">
                     <rect key="frame" x="16" y="359.66666666666669" width="398" height="154.00000000000006"/>
                     <constraints>
@@ -56,11 +47,8 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="pwt-88-kgG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="AgM-ga-P1x"/>
-                <constraint firstItem="9UU-X2-cjf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="BOW-Z3-ZEB"/>
                 <constraint firstItem="J4S-ag-9Ij" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="DXG-Tl-rAC"/>
                 <constraint firstItem="RkU-bh-biL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="KzA-nL-Hio"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9UU-X2-cjf" secondAttribute="trailing" constant="16" id="T3V-1s-oA2"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9UU-X2-cjf" secondAttribute="bottom" constant="16" id="ae7-rW-Ley"/>
                 <constraint firstItem="J4S-ag-9Ij" firstAttribute="top" secondItem="RkU-bh-biL" secondAttribute="bottom" constant="22" id="duW-dZ-QHH"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="J4S-ag-9Ij" secondAttribute="trailing" constant="16" id="h5x-pC-VID"/>
                 <constraint firstItem="RkU-bh-biL" firstAttribute="top" secondItem="pwt-88-kgG" secondAttribute="bottom" constant="32" id="oSX-kx-0AC"/>
