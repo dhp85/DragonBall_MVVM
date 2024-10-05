@@ -31,6 +31,7 @@ final class HeroesListViewController: UIViewController, UITableViewDataSource, U
     
     
     @IBAction func onRetryTapped(_ sender: Any) {
+        
     }
     
     // MARK: - States
