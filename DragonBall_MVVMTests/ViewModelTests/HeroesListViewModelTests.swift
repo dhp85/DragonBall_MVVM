@@ -38,7 +38,7 @@ final class HeroesListViewModelTests: XCTestCase {
     }
     
     func testFailureGetHeroes() {
-        let errorExpectation = expectation(description: "Success")
+        let errorExpectation = expectation(description: "Error")
         let loadingExpactation = expectation(description: "Loading")
         let useCaseMock = FailureGetHeroesUseCaseMock()
         let sut = HeroesListViewModel(useCase: useCaseMock)
