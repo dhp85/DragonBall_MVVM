@@ -8,7 +8,7 @@ final class HeroeDetailBuilder {
     }
     
     func build() -> UIViewController {
-        let viewModel = HeroeDetailViewModel()
+    
         
     }
 }
