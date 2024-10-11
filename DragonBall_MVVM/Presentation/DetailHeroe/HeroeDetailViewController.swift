@@ -28,19 +28,23 @@ final class HeroeDetailViewController: UIViewController {
     private func bind() {
         viewModel.onStateChanged.bind { [ weak self] state in
             switch state {
-            case .success(let heroe):
-                self?.configureView(with: heroe)
+            case .succes:
+                self?.configureView()
             case .error:
                 break
+            case .loading:
+                <#code#>
             }
         }
     }
     
     // MARK: - Configuration
-    private func configureView(with heroe: Hero) {
-        heroeImageView.setImage(heroe.photo)
-        heroeUILabel.text = heroe.name
-        characterLabelUILabel.text = heroe.description
+    private func configureView() {
+        heroeUILabel.text = viewModel.hero?.name
+        characterLabelUILabel.text = viewModel.hero?.description
+        if let photo = viewModel.hero?.photo {
+            heroeImageView.setImage(photo)
+        }
     }
 
 }
