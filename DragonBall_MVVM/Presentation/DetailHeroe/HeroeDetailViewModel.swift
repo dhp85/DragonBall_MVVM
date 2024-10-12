@@ -2,7 +2,7 @@ import Foundation
 
 
 enum HeroeDetailState: Equatable {
-    case succes
+    case success
     case loading
     case error
 }
@@ -11,10 +11,10 @@ enum HeroeDetailState: Equatable {
 final class HeroeDetailViewModel {
     let onStateChanged = Binding<HeroeDetailState>()
     private(set) var hero: Hero?
-    private let useCase: GetHeroeDetailUseCaseContract
+    private var useCase = GetHeroeDetailUseCase()
     private let heroName: String
     
-    init(heroName: String, useCase: GetHeroeDetailUseCaseContract) {
+    init(heroName: String, useCase: GetHeroeDetailUseCase) {
         self.heroName = heroName
         self.useCase = useCase
     }
@@ -25,8 +25,9 @@ final class HeroeDetailViewModel {
         onStateChanged.update(newValue: .loading)
         useCase.execute(heroe: heroName) { [weak self] result in
             switch result {
-            case .success(let heroe):
-                self?.onStateChanged.update(newValue: .succes)
+            case .success(let hero):
+                self?.hero = hero
+                self?.onStateChanged.update(newValue: .success)
             case .failure:
                 self?.onStateChanged.update(newValue: .error)
             }

@@ -13,6 +13,7 @@
                 <outlet property="characterLabelUILabel" destination="J4S-ag-9Ij" id="zSc-ku-jwr"/>
                 <outlet property="heroeImageView" destination="pwt-88-kgG" id="d3b-o0-yKk"/>
                 <outlet property="heroeUILabel" destination="RkU-bh-biL" id="5GM-A8-25p"/>
+                <outlet property="loadingActivityIndicator" destination="nc5-L5-BEl" id="Znr-ug-8tz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,6 +22,10 @@
             <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="nc5-L5-BEl">
+                    <rect key="frame" x="205" y="456" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </activityIndicatorView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pwt-88-kgG" customClass="AsyncImageView" customModule="DragonBall_MVVM" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="59" width="430" height="220"/>
                     <constraints>
@@ -55,7 +60,7 @@
                 <constraint firstItem="pwt-88-kgG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="uOu-Vm-M8z"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pwt-88-kgG" secondAttribute="trailing" id="uTc-TA-zxk"/>
             </constraints>
-            <point key="canvasLocation" x="49.618320610687022" y="-11.267605633802818"/>
+            <point key="canvasLocation" x="48.837209302325583" y="-11.587982832618026"/>
         </view>
     </objects>
     <resources>

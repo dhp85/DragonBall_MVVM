@@ -5,6 +5,7 @@ final class HeroeDetailViewController: UIViewController {
     @IBOutlet private weak var heroeImageView: AsyncImageView!
     @IBOutlet private weak var heroeUILabel: UILabel!
     @IBOutlet private weak var characterLabelUILabel: UILabel!
+    @IBOutlet weak var loadingActivityIndicator: UIActivityIndicatorView!
     
     private let viewModel: HeroeDetailViewModel
     
@@ -28,12 +29,12 @@ final class HeroeDetailViewController: UIViewController {
     private func bind() {
         viewModel.onStateChanged.bind { [ weak self] state in
             switch state {
-            case .succes:
+            case .success:
                 self?.configureView()
             case .error:
                 break
             case .loading:
-                <#code#>
+                self?.renderloading()
             }
         }
     }
@@ -45,6 +46,19 @@ final class HeroeDetailViewController: UIViewController {
         if let photo = viewModel.hero?.photo {
             heroeImageView.setImage(photo)
         }
+        
+        loadingActivityIndicator.stopAnimating()
+        heroeUILabel.isHidden = false
+        characterLabelUILabel.isHidden = false
+        heroeImageView.isHidden = false
+        
+    }
+    
+    private func renderloading() {
+        loadingActivityIndicator.startAnimating()
+        heroeUILabel.isHidden = true
+        characterLabelUILabel.isHidden = true
+        heroeImageView.isHidden = true
     }
 
 }
