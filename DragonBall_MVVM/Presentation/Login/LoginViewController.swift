@@ -53,10 +53,7 @@ final class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bind() // Establece el enlace entre el ViewModel y la vista.
-        
-        // Pre-llenar campos de texto con datos de prueba (puede eliminarse en producción).
-        userNameField.text = "diegohp85@gmail.com"
-        passwordField.text = "123456"
+
     }
     
     // MARK: - Actions
