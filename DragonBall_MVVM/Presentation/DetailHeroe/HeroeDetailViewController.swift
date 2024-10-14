@@ -5,8 +5,10 @@ final class HeroeDetailViewController: UIViewController {
     @IBOutlet private weak var heroeImageView: AsyncImageView!
     @IBOutlet weak var heroeUILabel: UILabel!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var characterLabelUILabel: UILabel!
     
+    @IBOutlet weak var errorContainer: UIStackView!
     
     @IBOutlet weak var loadingActivityIndicator: UIActivityIndicatorView!
     
@@ -54,14 +56,27 @@ final class HeroeDetailViewController: UIViewController {
         heroeUILabel.isHidden = false
         characterLabelUILabel.isHidden = false
         heroeImageView.isHidden = false
+        scrollView.isHidden = false
+        errorContainer.isHidden = true
         
     }
     
     private func renderloading() {
         loadingActivityIndicator.startAnimating()
+        scrollView.isHidden = true
         heroeUILabel.isHidden = true
         characterLabelUILabel.isHidden = true
         heroeImageView.isHidden = true
+        errorContainer.isHidden = true
+    }
+    
+    private func renderError() {
+        loadingActivityIndicator.stopAnimating()
+        heroeUILabel.isHidden = true
+        characterLabelUILabel.isHidden = true
+        heroeImageView.isHidden = true
+        errorContainer.isHidden = false
+        scrollView.isHidden = true
     }
 
 }

@@ -11,9 +11,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeroeDetailViewController" customModule="DragonBall_MVVM" customModuleProvider="target">
             <connections>
                 <outlet property="characterLabelUILabel" destination="4At-0O-Gff" id="XOJ-D3-ewc"/>
+                <outlet property="errorContainer" destination="OuF-6C-rfq" id="hF2-d5-PtI"/>
                 <outlet property="heroeImageView" destination="Cu7-ee-0Bg" id="6Nk-UM-nql"/>
                 <outlet property="heroeUILabel" destination="cGh-a2-7nL" id="BvA-o4-1aZ"/>
                 <outlet property="loadingActivityIndicator" destination="qGM-ue-XQ1" id="J8c-3u-HUm"/>
+                <outlet property="scrollView" destination="PFa-pY-297" id="OSz-A1-Vuc"/>
                 <outlet property="view" destination="iN0-l3-epB" id="gXG-dY-PrB"/>
             </connections>
         </placeholder>
@@ -25,23 +27,23 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFa-pY-297">
                     <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cgP-ge-N4z">
-                            <rect key="frame" x="16" y="16" width="361" height="437"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="cgP-ge-N4z">
+                            <rect key="frame" x="16" y="16" width="361" height="460"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="Cu7-ee-0Bg" customClass="AsyncImageView" customModule="DragonBall_MVVM" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="361" height="361"/>
                                 </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="FTy-K4-3CU">
-                                    <rect key="frame" x="0.0" y="371" width="361" height="66"/>
+                                    <rect key="frame" x="0.0" y="387" width="361" height="73"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGh-a2-7nL">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="33.666666666666664"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="40.666666666666664"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4At-0O-Gff">
-                                            <rect key="frame" x="0.0" y="45.666666666666686" width="361" height="20.333333333333329"/>
+                                            <rect key="frame" x="0.0" y="52.666666666666629" width="361" height="20.333333333333329"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -75,7 +77,7 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKf-A9-YPn">
                             <rect key="frame" x="0.0" y="20.333333333333375" width="345" height="34.333333333333343"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Retry"/>
                         </button>
                     </subviews>
                 </stackView>
