@@ -3,8 +3,11 @@ import UIKit
 
 final class HeroeDetailViewController: UIViewController {
     @IBOutlet private weak var heroeImageView: AsyncImageView!
-    @IBOutlet private weak var heroeUILabel: UILabel!
-    @IBOutlet private weak var characterLabelUILabel: UILabel!
+    @IBOutlet weak var heroeUILabel: UILabel!
+    
+    @IBOutlet weak var characterLabelUILabel: UILabel!
+    
+    
     @IBOutlet weak var loadingActivityIndicator: UIActivityIndicatorView!
     
     private let viewModel: HeroeDetailViewModel
