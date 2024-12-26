@@ -24,7 +24,7 @@ final class HeroeDetailViewModel {
     private(set) var hero: Hero?
     
     /// Caso de uso para obtener los detalles del héroe.
-    private var useCase: GetHeroeDetailUseCase
+    private var useCase: GetHeroeDetailUseCaseContract
     
     /// Nombre del héroe cuyo detalle se va a cargar.
     private let heroName: String
@@ -38,7 +38,7 @@ final class HeroeDetailViewModel {
         - heroName: El nombre del héroe cuyos detalles se desean cargar.
         - useCase: El caso de uso encargado de obtener los detalles del héroe.
      */
-    init(heroName: String, useCase: GetHeroeDetailUseCase) {
+    init(heroName: String, useCase: GetHeroeDetailUseCaseContract) {
         self.heroName = heroName
         self.useCase = useCase
     }
