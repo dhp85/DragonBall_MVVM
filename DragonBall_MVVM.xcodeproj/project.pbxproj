@@ -6,6 +6,45 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F7CF688A2D1D5FFB00A02285 /* HeroeDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7CF68692D1D5FFB00A02285 /* HeroeDetailView.xib */; };
+		F7CF688B2D1D5FFB00A02285 /* HeroTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7CF686E2D1D5FFB00A02285 /* HeroTableViewCell.xib */; };
+		F7CF688C2D1D5FFB00A02285 /* HeroesListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7CF68722D1D5FFB00A02285 /* HeroesListView.xib */; };
+		F7CF688D2D1D5FFB00A02285 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7CF68772D1D5FFB00A02285 /* LoginView.xib */; };
+		F7CF688E2D1D5FFB00A02285 /* SplashView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7CF687C2D1D5FFB00A02285 /* SplashView.xib */; };
+		F7CF688F2D1D5FFB00A02285 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7CF68832D1D5FFB00A02285 /* Assets.xcassets */; };
+		F7CF68912D1D5FFB00A02285 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CF68862D1D5FFB00A02285 /* LaunchScreen.storyboard */; };
+		F7CF68922D1D5FFB00A02285 /* SessionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF68532D1D5FFB00A02285 /* SessionDataSource.swift */; };
+		F7CF68932D1D5FFB00A02285 /* APIErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF68552D1D5FFB00A02285 /* APIErrorResponse.swift */; };
+		F7CF68942D1D5FFB00A02285 /* APIInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF68562D1D5FFB00A02285 /* APIInterceptor.swift */; };
+		F7CF68952D1D5FFB00A02285 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF68572D1D5FFB00A02285 /* APIRequest.swift */; };
+		F7CF68962D1D5FFB00A02285 /* APISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF68582D1D5FFB00A02285 /* APISession.swift */; };
+		F7CF68972D1D5FFB00A02285 /* GetHeroesAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF685A2D1D5FFB00A02285 /* GetHeroesAPIRequest.swift */; };
+		F7CF68982D1D5FFB00A02285 /* LoginAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF685B2D1D5FFB00A02285 /* LoginAPIRequest.swift */; };
+		F7CF68992D1D5FFB00A02285 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF685E2D1D5FFB00A02285 /* Credentials.swift */; };
+		F7CF689A2D1D5FFB00A02285 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF685F2D1D5FFB00A02285 /* Hero.swift */; };
+		F7CF689B2D1D5FFB00A02285 /* GetAllHeroesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF68612D1D5FFB00A02285 /* GetAllHeroesUseCase.swift */; };
+		F7CF689C2D1D5FFB00A02285 /* GetHeroeDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF68622D1D5FFB00A02285 /* GetHeroeDetailUseCase.swift */; };
+		F7CF689D2D1D5FFB00A02285 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF68632D1D5FFB00A02285 /* LoginUseCase.swift */; };
+		F7CF689E2D1D5FFB00A02285 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF68662D1D5FFB00A02285 /* AsyncImageView.swift */; };
+		F7CF689F2D1D5FFB00A02285 /* HeroeDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF68682D1D5FFB00A02285 /* HeroeDetailBuilder.swift */; };
+		F7CF68A02D1D5FFB00A02285 /* HeroeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF686A2D1D5FFB00A02285 /* HeroeDetailViewController.swift */; };
+		F7CF68A12D1D5FFB00A02285 /* HeroeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF686B2D1D5FFB00A02285 /* HeroeDetailViewModel.swift */; };
+		F7CF68A22D1D5FFB00A02285 /* HeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF686D2D1D5FFB00A02285 /* HeroTableViewCell.swift */; };
+		F7CF68A32D1D5FFB00A02285 /* HeroesListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF68712D1D5FFB00A02285 /* HeroesListBuilder.swift */; };
+		F7CF68A42D1D5FFB00A02285 /* HeroesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF68732D1D5FFB00A02285 /* HeroesListViewController.swift */; };
+		F7CF68A52D1D5FFB00A02285 /* HeroesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF68742D1D5FFB00A02285 /* HeroesListViewModel.swift */; };
+		F7CF68A62D1D5FFB00A02285 /* LoginBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF68762D1D5FFB00A02285 /* LoginBuilder.swift */; };
+		F7CF68A72D1D5FFB00A02285 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF68782D1D5FFB00A02285 /* LoginViewController.swift */; };
+		F7CF68A82D1D5FFB00A02285 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF68792D1D5FFB00A02285 /* LoginViewModel.swift */; };
+		F7CF68A92D1D5FFB00A02285 /* SplashBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF687B2D1D5FFB00A02285 /* SplashBuilder.swift */; };
+		F7CF68AA2D1D5FFB00A02285 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF687D2D1D5FFB00A02285 /* SplashViewController.swift */; };
+		F7CF68AB2D1D5FFB00A02285 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF687E2D1D5FFB00A02285 /* SplashViewModel.swift */; };
+		F7CF68AC2D1D5FFB00A02285 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF68802D1D5FFB00A02285 /* Binding.swift */; };
+		F7CF68AD2D1D5FFB00A02285 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF68822D1D5FFB00A02285 /* AppDelegate.swift */; };
+		F7CF68AE2D1D5FFB00A02285 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF68872D1D5FFB00A02285 /* SceneDelegate.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		F7D74D162CABFA2B00DBD072 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,30 +63,49 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F7CF68532D1D5FFB00A02285 /* SessionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDataSource.swift; sourceTree = "<group>"; };
+		F7CF68552D1D5FFB00A02285 /* APIErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrorResponse.swift; sourceTree = "<group>"; };
+		F7CF68562D1D5FFB00A02285 /* APIInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIInterceptor.swift; sourceTree = "<group>"; };
+		F7CF68572D1D5FFB00A02285 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		F7CF68582D1D5FFB00A02285 /* APISession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISession.swift; sourceTree = "<group>"; };
+		F7CF685A2D1D5FFB00A02285 /* GetHeroesAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHeroesAPIRequest.swift; sourceTree = "<group>"; };
+		F7CF685B2D1D5FFB00A02285 /* LoginAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPIRequest.swift; sourceTree = "<group>"; };
+		F7CF685E2D1D5FFB00A02285 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		F7CF685F2D1D5FFB00A02285 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		F7CF68612D1D5FFB00A02285 /* GetAllHeroesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllHeroesUseCase.swift; sourceTree = "<group>"; };
+		F7CF68622D1D5FFB00A02285 /* GetHeroeDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHeroeDetailUseCase.swift; sourceTree = "<group>"; };
+		F7CF68632D1D5FFB00A02285 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		F7CF68662D1D5FFB00A02285 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		F7CF68682D1D5FFB00A02285 /* HeroeDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeDetailBuilder.swift; sourceTree = "<group>"; };
+		F7CF68692D1D5FFB00A02285 /* HeroeDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroeDetailView.xib; sourceTree = "<group>"; };
+		F7CF686A2D1D5FFB00A02285 /* HeroeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeDetailViewController.swift; sourceTree = "<group>"; };
+		F7CF686B2D1D5FFB00A02285 /* HeroeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeDetailViewModel.swift; sourceTree = "<group>"; };
+		F7CF686D2D1D5FFB00A02285 /* HeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTableViewCell.swift; sourceTree = "<group>"; };
+		F7CF686E2D1D5FFB00A02285 /* HeroTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroTableViewCell.xib; sourceTree = "<group>"; };
+		F7CF68712D1D5FFB00A02285 /* HeroesListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListBuilder.swift; sourceTree = "<group>"; };
+		F7CF68722D1D5FFB00A02285 /* HeroesListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroesListView.xib; sourceTree = "<group>"; };
+		F7CF68732D1D5FFB00A02285 /* HeroesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListViewController.swift; sourceTree = "<group>"; };
+		F7CF68742D1D5FFB00A02285 /* HeroesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListViewModel.swift; sourceTree = "<group>"; };
+		F7CF68762D1D5FFB00A02285 /* LoginBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBuilder.swift; sourceTree = "<group>"; };
+		F7CF68772D1D5FFB00A02285 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		F7CF68782D1D5FFB00A02285 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F7CF68792D1D5FFB00A02285 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		F7CF687B2D1D5FFB00A02285 /* SplashBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashBuilder.swift; sourceTree = "<group>"; };
+		F7CF687C2D1D5FFB00A02285 /* SplashView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashView.xib; sourceTree = "<group>"; };
+		F7CF687D2D1D5FFB00A02285 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		F7CF687E2D1D5FFB00A02285 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		F7CF68802D1D5FFB00A02285 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
+		F7CF68822D1D5FFB00A02285 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F7CF68832D1D5FFB00A02285 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7CF68842D1D5FFB00A02285 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7CF68852D1D5FFB00A02285 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F7CF68872D1D5FFB00A02285 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F7D74CFF2CABFA2A00DBD072 /* DragonBall_MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonBall_MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D74D152CABFA2B00DBD072 /* DragonBall_MVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragonBall_MVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D74D1F2CABFA2C00DBD072 /* DragonBall_MVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragonBall_MVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		F7D74D272CABFA2C00DBD072 /* Exceptions for "DragonBall_MVVM" folder in "DragonBall_MVVM" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"Supporting Files/Info.plist",
-			);
-			target = F7D74CFE2CABFA2A00DBD072 /* DragonBall_MVVM */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		F7D74D012CABFA2A00DBD072 /* DragonBall_MVVM */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				F7D74D272CABFA2C00DBD072 /* Exceptions for "DragonBall_MVVM" folder in "DragonBall_MVVM" target */,
-			);
-			path = DragonBall_MVVM;
-			sourceTree = "<group>";
-		};
 		F7D74D182CABFA2B00DBD072 /* DragonBall_MVVMTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = DragonBall_MVVMTests;
@@ -85,10 +143,182 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F7CF68542D1D5FFB00A02285 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				F7CF68532D1D5FFB00A02285 /* SessionDataSource.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		F7CF68592D1D5FFB00A02285 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F7CF68552D1D5FFB00A02285 /* APIErrorResponse.swift */,
+				F7CF68562D1D5FFB00A02285 /* APIInterceptor.swift */,
+				F7CF68572D1D5FFB00A02285 /* APIRequest.swift */,
+				F7CF68582D1D5FFB00A02285 /* APISession.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		F7CF685C2D1D5FFB00A02285 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				F7CF685A2D1D5FFB00A02285 /* GetHeroesAPIRequest.swift */,
+				F7CF685B2D1D5FFB00A02285 /* LoginAPIRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		F7CF685D2D1D5FFB00A02285 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F7CF68542D1D5FFB00A02285 /* DataSources */,
+				F7CF68592D1D5FFB00A02285 /* Networking */,
+				F7CF685C2D1D5FFB00A02285 /* Requests */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F7CF68602D1D5FFB00A02285 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F7CF685E2D1D5FFB00A02285 /* Credentials.swift */,
+				F7CF685F2D1D5FFB00A02285 /* Hero.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F7CF68642D1D5FFB00A02285 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				F7CF68612D1D5FFB00A02285 /* GetAllHeroesUseCase.swift */,
+				F7CF68622D1D5FFB00A02285 /* GetHeroeDetailUseCase.swift */,
+				F7CF68632D1D5FFB00A02285 /* LoginUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		F7CF68652D1D5FFB00A02285 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				F7CF68602D1D5FFB00A02285 /* Models */,
+				F7CF68642D1D5FFB00A02285 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		F7CF68672D1D5FFB00A02285 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				F7CF68662D1D5FFB00A02285 /* AsyncImageView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		F7CF686C2D1D5FFB00A02285 /* DetailHeroe */ = {
+			isa = PBXGroup;
+			children = (
+				F7CF68682D1D5FFB00A02285 /* HeroeDetailBuilder.swift */,
+				F7CF68692D1D5FFB00A02285 /* HeroeDetailView.xib */,
+				F7CF686A2D1D5FFB00A02285 /* HeroeDetailViewController.swift */,
+				F7CF686B2D1D5FFB00A02285 /* HeroeDetailViewModel.swift */,
+			);
+			path = DetailHeroe;
+			sourceTree = "<group>";
+		};
+		F7CF686F2D1D5FFB00A02285 /* HeroCell */ = {
+			isa = PBXGroup;
+			children = (
+				F7CF686D2D1D5FFB00A02285 /* HeroTableViewCell.swift */,
+				F7CF686E2D1D5FFB00A02285 /* HeroTableViewCell.xib */,
+			);
+			path = HeroCell;
+			sourceTree = "<group>";
+		};
+		F7CF68702D1D5FFB00A02285 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F7CF686F2D1D5FFB00A02285 /* HeroCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F7CF68752D1D5FFB00A02285 /* HeroesList */ = {
+			isa = PBXGroup;
+			children = (
+				F7CF68702D1D5FFB00A02285 /* Cells */,
+				F7CF68712D1D5FFB00A02285 /* HeroesListBuilder.swift */,
+				F7CF68722D1D5FFB00A02285 /* HeroesListView.xib */,
+				F7CF68732D1D5FFB00A02285 /* HeroesListViewController.swift */,
+				F7CF68742D1D5FFB00A02285 /* HeroesListViewModel.swift */,
+			);
+			path = HeroesList;
+			sourceTree = "<group>";
+		};
+		F7CF687A2D1D5FFB00A02285 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F7CF68762D1D5FFB00A02285 /* LoginBuilder.swift */,
+				F7CF68772D1D5FFB00A02285 /* LoginView.xib */,
+				F7CF68782D1D5FFB00A02285 /* LoginViewController.swift */,
+				F7CF68792D1D5FFB00A02285 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F7CF687F2D1D5FFB00A02285 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				F7CF687B2D1D5FFB00A02285 /* SplashBuilder.swift */,
+				F7CF687C2D1D5FFB00A02285 /* SplashView.xib */,
+				F7CF687D2D1D5FFB00A02285 /* SplashViewController.swift */,
+				F7CF687E2D1D5FFB00A02285 /* SplashViewModel.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		F7CF68812D1D5FFB00A02285 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F7CF68672D1D5FFB00A02285 /* CustomViews */,
+				F7CF686C2D1D5FFB00A02285 /* DetailHeroe */,
+				F7CF68752D1D5FFB00A02285 /* HeroesList */,
+				F7CF687A2D1D5FFB00A02285 /* Login */,
+				F7CF687F2D1D5FFB00A02285 /* Splash */,
+				F7CF68802D1D5FFB00A02285 /* Binding.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F7CF68882D1D5FFB00A02285 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7CF68822D1D5FFB00A02285 /* AppDelegate.swift */,
+				F7CF68832D1D5FFB00A02285 /* Assets.xcassets */,
+				F7CF68842D1D5FFB00A02285 /* Info.plist */,
+				F7CF68862D1D5FFB00A02285 /* LaunchScreen.storyboard */,
+				F7CF68872D1D5FFB00A02285 /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F7CF68892D1D5FFB00A02285 /* DragonBall_MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				F7CF68812D1D5FFB00A02285 /* Presentation */,
+				F7CF68652D1D5FFB00A02285 /* Domain */,
+				F7CF685D2D1D5FFB00A02285 /* Data */,
+				F7CF68882D1D5FFB00A02285 /* Supporting Files */,
+			);
+			path = DragonBall_MVVM;
+			sourceTree = "<group>";
+		};
 		F7D74CF62CABFA2A00DBD072 = {
 			isa = PBXGroup;
 			children = (
-				F7D74D012CABFA2A00DBD072 /* DragonBall_MVVM */,
+				F7CF68892D1D5FFB00A02285 /* DragonBall_MVVM */,
 				F7D74D182CABFA2B00DBD072 /* DragonBall_MVVMTests */,
 				F7D74D222CABFA2C00DBD072 /* DragonBall_MVVMUITests */,
 				F7D74D002CABFA2A00DBD072 /* Products */,
@@ -119,9 +349,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				F7D74D012CABFA2A00DBD072 /* DragonBall_MVVM */,
 			);
 			name = DragonBall_MVVM;
 			packageProductDependencies = (
@@ -225,6 +452,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7CF688A2D1D5FFB00A02285 /* HeroeDetailView.xib in Resources */,
+				F7CF688B2D1D5FFB00A02285 /* HeroTableViewCell.xib in Resources */,
+				F7CF688C2D1D5FFB00A02285 /* HeroesListView.xib in Resources */,
+				F7CF688D2D1D5FFB00A02285 /* LoginView.xib in Resources */,
+				F7CF688E2D1D5FFB00A02285 /* SplashView.xib in Resources */,
+				F7CF688F2D1D5FFB00A02285 /* Assets.xcassets in Resources */,
+				F7CF68912D1D5FFB00A02285 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +483,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7CF68922D1D5FFB00A02285 /* SessionDataSource.swift in Sources */,
+				F7CF68932D1D5FFB00A02285 /* APIErrorResponse.swift in Sources */,
+				F7CF68942D1D5FFB00A02285 /* APIInterceptor.swift in Sources */,
+				F7CF68952D1D5FFB00A02285 /* APIRequest.swift in Sources */,
+				F7CF68962D1D5FFB00A02285 /* APISession.swift in Sources */,
+				F7CF68972D1D5FFB00A02285 /* GetHeroesAPIRequest.swift in Sources */,
+				F7CF68982D1D5FFB00A02285 /* LoginAPIRequest.swift in Sources */,
+				F7CF68992D1D5FFB00A02285 /* Credentials.swift in Sources */,
+				F7CF689A2D1D5FFB00A02285 /* Hero.swift in Sources */,
+				F7CF689B2D1D5FFB00A02285 /* GetAllHeroesUseCase.swift in Sources */,
+				F7CF689C2D1D5FFB00A02285 /* GetHeroeDetailUseCase.swift in Sources */,
+				F7CF689D2D1D5FFB00A02285 /* LoginUseCase.swift in Sources */,
+				F7CF689E2D1D5FFB00A02285 /* AsyncImageView.swift in Sources */,
+				F7CF689F2D1D5FFB00A02285 /* HeroeDetailBuilder.swift in Sources */,
+				F7CF68A02D1D5FFB00A02285 /* HeroeDetailViewController.swift in Sources */,
+				F7CF68A12D1D5FFB00A02285 /* HeroeDetailViewModel.swift in Sources */,
+				F7CF68A22D1D5FFB00A02285 /* HeroTableViewCell.swift in Sources */,
+				F7CF68A32D1D5FFB00A02285 /* HeroesListBuilder.swift in Sources */,
+				F7CF68A42D1D5FFB00A02285 /* HeroesListViewController.swift in Sources */,
+				F7CF68A52D1D5FFB00A02285 /* HeroesListViewModel.swift in Sources */,
+				F7CF68A62D1D5FFB00A02285 /* LoginBuilder.swift in Sources */,
+				F7CF68A72D1D5FFB00A02285 /* LoginViewController.swift in Sources */,
+				F7CF68A82D1D5FFB00A02285 /* LoginViewModel.swift in Sources */,
+				F7CF68A92D1D5FFB00A02285 /* SplashBuilder.swift in Sources */,
+				F7CF68AA2D1D5FFB00A02285 /* SplashViewController.swift in Sources */,
+				F7CF68AB2D1D5FFB00A02285 /* SplashViewModel.swift in Sources */,
+				F7CF68AC2D1D5FFB00A02285 /* Binding.swift in Sources */,
+				F7CF68AD2D1D5FFB00A02285 /* AppDelegate.swift in Sources */,
+				F7CF68AE2D1D5FFB00A02285 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +543,17 @@
 			targetProxy = F7D74D202CABFA2C00DBD072 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F7CF68862D1D5FFB00A02285 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7CF68852D1D5FFB00A02285 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F7D74D292CABFA2C00DBD072 /* Debug */ = {

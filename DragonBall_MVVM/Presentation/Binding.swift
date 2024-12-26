@@ -37,8 +37,14 @@ final class Binding<State> {
      Esta función actualiza el estado actual con un nuevo valor y ejecuta el cierre de `completion` en el hilo principal para asegurar que las actualizaciones de la interfaz de usuario ocurran correctamente.
      */
     func update(newValue: State) {
-        DispatchQueue.main.async { [weak self] in
-            self?.completion?(newValue)
+        if Thread.isMainThread {
+            // Ejecutar directamente si ya estamos en el hilo principal
+            completion?(newValue)
+        } else {
+            // Asegurarse de ejecutar en el hilo principal
+            DispatchQueue.main.async { [weak self] in
+                self?.completion?(newValue)
+            }
         }
     }
 }
